@@ -2,29 +2,31 @@
 @import "tw-animate-css";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-background-dark: var(--background-dark);
-  --color-background-light: var(--background-light);
-  --color-foreground: var(--foreground);
-  --color-ring: var(--ring);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-muted: var(--muted);
-  --color-primary: var(--primary);
-  --color-primary2: var(--primary2);
+    --color-background: var(--background);
+    --color-background-dark: var(--background-dark);
+    --color-background-light: var(--background-light);
+    --color-foreground: var(--foreground);
+    --color-ring: var(--ring);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-muted: var(--muted);
+    --color-primary: var(--primary);
+    --color-primary2: var(--primary2);
+    --spacing-section-padding: var(--section-padding);
 }
 
 :root {
-  --background: #EDDBFF;
-  --background-light: #FBF7FF;
-  --background-dark: #E0C2FF;
-  --foreground: #474554;
-  --primary: #7E78D2;
-  --primary2: #424396;
-  --muted: #ACA9BB;
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: #AD5CFF;
-  --ring: #7E78D2;
+    --background: #EDDBFF;
+    --background-light: #FBF7FF;
+    --background-dark: #E0C2FF;
+    --foreground: #474554;
+    --primary: #7E78D2;
+    --primary2: #424396;
+    --muted: #ACA9BB;
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: #AD5CFF;
+    --ring: #7E78D2;
+    --section-padding: 5rem;
 }
 
 @layer base {
