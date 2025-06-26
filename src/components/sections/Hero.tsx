@@ -5,9 +5,9 @@ import { Button } from '../ui/button'
 
 function Hero() {
   return (
-    <header className='relative h-screen'>
+    <header className='relative h-screen z-0'>
         <Container>
-            <div className='relative flex flex-col justify-center gap-5 md:gap-10 h-full text-center z-10'>
+            <div className='flex flex-col justify-center gap-5 md:gap-10 h-full text-center'>
                 <h1 className='heading1'>Strona internetowa dla <span className='text-primary'>Twojego biznesu</span></h1>
                 <p className='bigger-text'>
                     Tworzymy nowoczesne i responsywne strony internetowe, które pomogą Ci wyróżnić się w sieci. 
@@ -25,7 +25,7 @@ function Hero() {
         </Container>
         <div
         className={cn(
-          "absolute inset-0 opacity-70",
+          "absolute inset-0 opacity-70 -z-10",
           "[background-size:40px_40px]",
           "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
         )}
