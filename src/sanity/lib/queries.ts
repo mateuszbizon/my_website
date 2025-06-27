@@ -5,3 +5,9 @@ export const GET_SINGLE_POST_QUERY = defineQuery(`
         _id, publishedAt, title, body[], mainImage, subpagesAmount, daysMakingAmount, websiteLink, websiteName
     }    
 `)
+
+export const GET_RECENT_POSTS_QUERY = defineQuery(`
+    *[_type == "post"] | order(publishedAt desc)[0...9] {
+        _id, title, slug, mainImage
+    }    
+`)

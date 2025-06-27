@@ -1,6 +1,7 @@
 import About from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
 import Offer from "@/components/sections/Offer";
+import RecentPostsSection from "@/components/sections/RecentPostsSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <Hero />
         <About />
         <Offer />
+        <RecentPostsSection />
     </>
   );
 }
