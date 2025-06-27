@@ -194,3 +194,67 @@ export type SanityAssetSourceData = {
 
 export type AllSanitySchemaTypes = BlockContent | Post | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageHotspot | SanityImageCrop | SanityFileAsset | SanityImageAsset | SanityImageMetadata | Geopoint | Slug | SanityAssetSourceData;
 export declare const internalGroqTypeReferenceTo: unique symbol;
+// Source: ./src/sanity/lib/queries.ts
+// Variable: GET_SINGLE_POST_QUERY
+// Query: *[_type == "post" && slug.current == $slug][0] {        _id, publishedAt, title, body[], mainImage, subpagesAmount, daysMakingAmount, websiteLink, websiteName    }
+export type GET_SINGLE_POST_QUERYResult = {
+  _id: string;
+  publishedAt: string | null;
+  title: string | null;
+  body: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
+    listItem?: "bullet";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  } | {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+    _key: string;
+  }> | null;
+  mainImage: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+  } | null;
+  subpagesAmount: number | null;
+  daysMakingAmount: number | null;
+  websiteLink: string | null;
+  websiteName: string | null;
+} | null;
+
+// Query TypeMap
+import "@sanity/client";
+declare module "@sanity/client" {
+  interface SanityQueries {
+    "\n    *[_type == \"post\" && slug.current == $slug][0] {\n        _id, publishedAt, title, body[], mainImage, subpagesAmount, daysMakingAmount, websiteLink, websiteName\n    }    \n": GET_SINGLE_POST_QUERYResult;
+  }
+}
