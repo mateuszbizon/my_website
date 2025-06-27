@@ -58,4 +58,8 @@
     .heading-margin-bottom {
         @apply mb-10 md:mb-16
     }
+
+    .link {
+        @apply text-primary hover:text-primary2 transition duration-300
+    }
 }
