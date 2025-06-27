@@ -51,6 +51,14 @@ export const postType = defineType({
     defineField({
         name: "daysMakingAmount",
         type: "number"
+    }),
+    defineField({
+        name: "websiteLink",
+        type: "string"
+    }),
+    defineField({
+        name: "websiteName",
+        type: "string"
     })
   ],
   preview: {

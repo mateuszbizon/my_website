@@ -70,6 +70,8 @@ export type Post = {
   body?: BlockContent;
   subpagesAmount?: number;
   daysMakingAmount?: number;
+  websiteLink?: string;
+  websiteName?: string;
 };
 
 export type SanityImagePaletteSwatch = {
