@@ -9,6 +9,7 @@ import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { Textarea } from '../ui/textarea'
 import { createClientRecord } from '@/lib/services/airtable'
+import { toast } from 'react-toastify'
 
 function ContactForm() {
     const form = useForm<ContactSchema>({
@@ -26,8 +27,10 @@ function ContactForm() {
         try {
             await createClientRecord(data)
             form.reset()
+            toast.success("Formularz wysłany pomyślnie")
         } catch (error) {
             console.log(error)
+            toast.error("Coś poszło nie tak. Spróbuj ponownie później")
         }
     }
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify"
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,6 +23,11 @@ export default function RootLayout({
       <body
         className={`${inter.className}`}
       >
+        <ToastContainer
+            position="top-center"
+            autoClose={3000}
+            closeOnClick={true}
+        />
         {children}
       </body>
     </html>
