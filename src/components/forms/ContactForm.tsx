@@ -8,6 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { Textarea } from '../ui/textarea'
+import { createClientRecord } from '@/lib/services/airtable'
 
 function ContactForm() {
     const form = useForm<ContactSchema>({
@@ -21,8 +22,13 @@ function ContactForm() {
     })
     const { formState: { isSubmitting } } = form
 
-    function onSubmit(data: ContactSchema) {
-        console.log(data)
+    async function onSubmit(data: ContactSchema) {
+        try {
+            await createClientRecord(data)
+            form.reset()
+        } catch (error) {
+            console.log(error)
+        }
     }
 
   return (
