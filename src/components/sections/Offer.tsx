@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../ui/container'
-import { BanknoteArrowUp, CalendarArrowUp, PanelsTopLeft } from 'lucide-react'
+import { Languages, LayoutDashboard, MapPin, Scissors, UtensilsCrossed } from 'lucide-react'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 
@@ -11,10 +11,10 @@ function Offer() {
             <h2 className='heading2 heading-margin-bottom text-center'>Sprawdź co mogę zaoferować dla Ciebie lub Twojej firmy</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 <div className='offer-card group'>
-                    <PanelsTopLeft className='offer-card-icon' />
-                    <h3 className='heading3'>Strona internetowa</h3>
+                    <Scissors className='offer-card-icon' />
+                    <h3 className='heading3'>Strony dla fryzjerów</h3>
                     <p className='text-lg'>
-                        Tworzę nowoczesne i responsywne strony internetowe dopasowane do potrzeb Twojej firmy. Dbam o estetykę i funkcjonalność.
+                        Profesjonalna strona internetowa dla salonów fryzjerskich z łatwą prezentacją oferty, cennika i możliwością rezerwacji wizyt online.
                     </p>
                     <div className='flex justify-center'>
                         <Button asChild>
@@ -26,10 +26,10 @@ function Offer() {
                 </div>
 
                 <div className='offer-card group'>
-                    <CalendarArrowUp className='offer-card-icon' />
-                    <h3 className='heading3'>Pozycjonowanie strony</h3>
+                    <Languages className='offer-card-icon' />
+                    <h3 className='heading3'>Strony dla szkół językowych</h3>
                     <p className='text-lg'>
-                        Zadbam o to, aby Twoja strona była widoczna w wynikach wyszukiwania Google i przyciągała wartościowych klientów. Stosuję skuteczne techniki SEO, które zwiększają ruch i poprawiają pozycję witryny.
+                        Strona idealna dla szkół językowych – z sekcją kursów, grafikami zajęć i możliwością zapisu na lekcje próbne.
                     </p>
                     <div className='flex justify-center'>
                         <Button asChild>
@@ -41,10 +41,40 @@ function Offer() {
                 </div>
 
                 <div className='offer-card group'>
-                    <BanknoteArrowUp className='offer-card-icon' />
-                    <h3 className='heading3'>Pozycjonowanie wizytówki</h3>
+                    <UtensilsCrossed className='offer-card-icon' />
+                    <h3 className='heading3'>Strony dla restauracji</h3>
                     <p className='text-lg'>
-                        Optymalizuję wizytówki Google Moja Firma, aby były lepiej widoczne lokalnie i generowały więcej kontaktów. Wprowadzam odpowiednie treści, zdjęcia oraz słowa kluczowe, które zwiększają zasięg Twojej działalności.
+                        Atrakcyjne wizualnie strony restauracji z menu, zdjęciami dań i integracją z Google Maps czy systemem zamawiania.
+                    </p>
+                    <div className='flex justify-center'>
+                        <Button asChild>
+                            <Link href={"/"}>
+                                Dowiedz się więcej
+                            </Link>
+                        </Button>
+                    </div>
+                </div>
+
+                <div className='offer-card group'>
+                    <LayoutDashboard className='offer-card-icon' />
+                    <h3 className='heading3'>Strony niestandardowe</h3>
+                    <p className='text-lg'>
+                         Tworzę również strony dopasowane do indywidualnych potrzeb Twojego biznesu – od projektu po wdrożenie.
+                    </p>
+                    <div className='flex justify-center'>
+                        <Button asChild>
+                            <Link href={"/"}>
+                                Dowiedz się więcej
+                            </Link>
+                        </Button>
+                    </div>
+                </div>
+
+                <div className='offer-card group'>
+                    <MapPin className='offer-card-icon' />
+                    <h3 className='heading3'>Pozycjonowanie wizytówki Google</h3>
+                    <p className='text-lg'>
+                        Zadbam o to, aby Twoja firma była dobrze widoczna w Google – optymalizacja wizytówki Google Moja Firma krok po kroku.
                     </p>
                     <div className='flex justify-center'>
                         <Button asChild>
