@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 function Hero() {
   return (
-    <header className='relative h-screen z-0'>
+    <header className='relative py-section-padding lg:h-screen lg:py-0 z-0'>
         <BackgroundBeamsWithCollision>
             <Container>
                 <div className='flex flex-col justify-center gap-5 md:gap-10 h-full text-center'>
