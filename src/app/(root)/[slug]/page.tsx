@@ -40,7 +40,7 @@ async function PostPage({ params }: Props) {
             <Container>
                 {post.mainImage && (
                     <figure className='aspect-video relative -mt-40 md:-mt-30 rounded-xl overflow-hidden'>
-                        <Image src={urlFor(post.mainImage).url()} alt={post.mainImage.alt || ""} fill className='object-cover' />
+                        <Image src={urlFor(post.mainImage).url()} alt={post.mainImage.alt || ""} fill className='object-contain' />
                     </figure>
                 )}
                 <div className='mt-20 flex flex-col md:flex-row gap-5'>

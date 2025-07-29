@@ -11,10 +11,10 @@ type PostCardProps = {
 function PostCard({ post }: PostCardProps) {
   return (
     <Link href={`/${post.slug?.current}`} title={post.title || ""}>
-        <div className='bg-background-light rounded-2xl space-y-3 border border-background shadow-xl shadow-background-dark hover:shadow-foreground transition overflow-hidden'>
+        <div className='bg-background-light rounded-2xl border border-background shadow-xl shadow-background-dark hover:shadow-foreground transition overflow-hidden'>
             {post.mainImage && (
                 <figure className='relative aspect-video'>
-                    <Image src={urlFor(post.mainImage).url()} alt={post.mainImage.alt || ""} fill className='object-cover' />
+                    <Image src={urlFor(post.mainImage).url()} alt={post.mainImage.alt || ""} fill className='object-contain' />
                 </figure>
             )}
             <div className='p-5'>
