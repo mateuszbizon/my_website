@@ -8,6 +8,7 @@ import useScroll from '@/lib/hooks/useScroll'
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '../ui/navigation-menu'
 import NavCard from '../cards/NavCard'
 import { NAV_ITEMS } from '@/constants/navItems'
+import NavMobile from './NavMobile'
 
 function Nav() {
     const { isScrolled } = useScroll({ scrollAmount: 50 })
@@ -33,14 +34,14 @@ function Nav() {
                     </NavigationMenu>
                 </div>
                 <div className='hidden lg:block'>
-                    <Button className='ml-2' asChild>
-                        <Link href={"/darmowa-wycena"} target='_blank'>
+                    <Button asChild>
+                        <Link href={"/darmowa-wycena"}>
                             Darmowa wycena
                         </Link>
                     </Button>
                 </div>
                 <div className='lg:hidden'>
-                    {/* <NavMobile /> */}
+                    <NavMobile />
                 </div>
             </div>
         </Container>
