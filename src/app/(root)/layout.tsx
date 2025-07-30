@@ -1,11 +1,16 @@
+import Nav from "@/components/common/Nav";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <main>
-        {children}
-    </main>
+    <>
+        <Nav />
+        <main>
+            {children}
+        </main>
+    </>
   );
 }
