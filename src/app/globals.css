@@ -57,6 +57,10 @@
         @apply text-lg md:text-xl xl:text-2xl font-medium
     }
 
+    .little-bigger-text {
+        @apply text-lg md:text-xl
+    }
+
     .heading-margin-bottom {
         @apply mb-10 md:mb-16
     }
