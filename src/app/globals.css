@@ -14,6 +14,7 @@
     --color-muted: var(--muted);
     --color-primary: var(--primary);
     --color-primary2: var(--primary2);
+    --color-primary-dark: var(--primary-dark);
     --spacing-section-padding: var(--section-padding);
     --spacing-nav-height: var(--nav-height);
 }
@@ -25,6 +26,7 @@
     --foreground: #474554;
     --primary: #7E78D2;
     --primary2: #424396;
+    --primary-dark: #00155E;
     --muted: #ACA9BB;
     --destructive: oklch(0.577 0.245 27.325);
     --border: #AD5CFF;

@@ -6,6 +6,8 @@ import Autoplay from "embla-carousel-autoplay"
 import { Carousel, CarouselContent, CarouselNext, CarouselPrevious } from '../ui/carousel'
 import ReviewCard from '../cards/ReviewCard'
 import { REVIEWS_LIST } from '@/constants/reviews'
+import { Button } from '../ui/button'
+import Link from 'next/link'
 
 function Reviews() {
     const plugin = React.useRef(
@@ -15,7 +17,7 @@ function Reviews() {
   return (
     <section className='bg-primary py-section-padding text-background-light'>
         <Container>
-            <h2 className='heading2 text-center heading-margin-bottom'>Opinie</h2>
+            <h2 className='heading2 text-center heading-margin-bottom'>Co inni mówią o mnie</h2>
             <Carousel
                 opts={{
                     loop: true
@@ -33,6 +35,13 @@ function Reviews() {
                 <CarouselPrevious className='hidden lg:inline-flex border-background-light hover:bg-foreground hover:border-foreground' />
                 <CarouselNext className='hidden lg:inline-flex border-background-light hover:bg-foreground hover:border-foreground' />
             </Carousel>
+            <div className='flex justify-center'>
+                <Button variant={"secondary"} size={"lg"} asChild>
+                    <Link href={"/"}>
+                        Wszystkie opinie
+                    </Link>
+                </Button>
+            </div>
         </Container>
     </section>
   )
