@@ -52,7 +52,7 @@ function Footer() {
                 </div>
 
                 <div className='space-y-4 text-center md:text-left'>
-                    <p className='bigger-text'>Usługi</p>
+                    <p className='bigger-text'>Oferta</p>
                     <nav>
                         <ul className='space-y-2'>
                             {SERVICE_ITEMS.map(item => (
