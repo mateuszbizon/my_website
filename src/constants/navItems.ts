@@ -3,23 +3,23 @@ import { NavItem, NavLink } from "@/types";
 export const SERVICE_ITEMS: NavLink[] = [
     {
         label: "Strona fryzjerów",
-        href: "/strona-fryzjerow"
+        href: "/oferta/strona-fryzjerow"
     },
     {
         label: "Strona szkół językowych",
-        href: "/strona-szkol-jezykowych"
+        href: "/oferta/strona-szkol-jezykowych"
     },
     {
         label: "Strona restauracji",
-        href: "/strona-restauracji"
+        href: "/oferta/strona-restauracji"
     },
     {
         label: "Strona niestandardowa",
-        href: "/strona-niestandardowa"
+        href: "/oferta/strona-niestandardowa"
     },
     {
         label: "Pozycjonowanie wizytówki",
-        href: "/pozycjonowanie-wizytowki"
+        href: "/oferta/pozycjonowanie-wizytowki"
     },
 ]
 
@@ -30,7 +30,7 @@ export const NAV_ITEMS: NavItem[] = [
         href: "/o-mnie"
     },
     {
-        label: "Usługi",
+        label: "Oferta",
         isLink: false,
         menu: SERVICE_ITEMS
     },

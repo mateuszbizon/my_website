@@ -22,7 +22,7 @@ function NavCard({ item }: NavCardProps) {
         ) : (
             <>
                 <NavigationMenuTrigger className={`${buttonVariants({ variant: "link" })} py-0 text-foreground hover:primary text-lg`}>
-                    Usługi
+                    {item.label}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                     <ul className='space-y-1'>
