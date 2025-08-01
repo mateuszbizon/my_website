@@ -22,4 +22,5 @@ export type NavItem = {
 } | {
     isLink: false;
     menu: NavLink[];
+    href?: string;
 })

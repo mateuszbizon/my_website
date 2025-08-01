@@ -27,9 +27,17 @@ function Footer() {
                     <nav>
                         <ul className='space-y-2'>
                             {NAV_ITEMS.map(item => {
-                                if (!item.isLink) return null
+                                if (item.isLink) return (
+                                    <li key={item.label}>
+                                        <Button className='text-white hover:text-white/70' size={"link"} variant={"link"} asChild>
+                                            <Link href={item.href}>
+                                                {item.label}
+                                            </Link>
+                                        </Button>
+                                    </li>
+                                )
 
-                                return (
+                                if (!item.isLink && item.href) return (
                                     <li key={item.label}>
                                         <Button className='text-white hover:text-white/70' size={"link"} variant={"link"} asChild>
                                             <Link href={item.href}>

@@ -32,7 +32,8 @@ export const NAV_ITEMS: NavItem[] = [
     {
         label: "Oferta",
         isLink: false,
-        menu: SERVICE_ITEMS
+        menu: SERVICE_ITEMS,
+        href: "/oferta"
     },
     {
         label: "Portfolio",
