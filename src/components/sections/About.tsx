@@ -21,16 +21,20 @@ function About() {
                         </p>
                         <p>
                             <strong>Masz dla mnie zlecenie?</strong>{" "}
-                            <Link href={"/"} className={`link text-lg`}>
+                            <Link href={"/darmowa-wycena"} className={`link text-lg`}>
                                 Zapraszam na bezpłatną konsultację
                             </Link>
                         </p>
                         <div className='flex gap-5 flex-wrap'>
-                            <Button>
-                                Zobacz portfolio
+                            <Button asChild>
+                                <Link href={"/portfolio"}>
+                                    Zobacz portfolio
+                                </Link>
                             </Button>
-                            <Button variant={"outline"}>
-                                Sprawdź ofertę
+                            <Button variant={"outline"} asChild>
+                                <Link href={"/oferta"}>
+                                    Sprawdź ofertę
+                                </Link>
                             </Button>
                         </div>
                     </div>
