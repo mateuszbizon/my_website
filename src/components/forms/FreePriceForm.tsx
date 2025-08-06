@@ -8,6 +8,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 import { Button } from '../ui/button'
+import { toast } from 'react-toastify'
+import { createFreePriceRecord } from '@/lib/services/airtable'
 
 function FreePriceForm() {
     const form = useForm<FreePriceSchema>({
@@ -24,8 +26,15 @@ function FreePriceForm() {
     })
     const { formState: { isSubmitting } } = form
 
-    function onSubmit(data: FreePriceSchema) {
-        console.log(data)
+    async function onSubmit(data: FreePriceSchema) {
+        try {
+            await createFreePriceRecord(data)
+            form.reset()
+            toast.success("Formularz wysłany pomyślnie")
+        } catch (error) {
+            console.log(error)
+            toast.error("Coś poszło nie tak. Spróbuj ponownie później")
+        }
     }
 
   return (
@@ -41,7 +50,7 @@ function FreePriceForm() {
                             <FormItem>
                                 <FormLabel>Ilość podstron</FormLabel>
                                 <FormControl>
-                                    <Input type='number' placeholder='Wpisz ilość podstron' {...field} />
+                                    <Input type='number' placeholder='Wpisz ilość podstron' {...field} {...form.register('subPagesAmount', { valueAsNumber: true })} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
