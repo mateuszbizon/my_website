@@ -270,6 +270,26 @@ export type GET_RECENT_POSTS_QUERYResult = Array<{
     _type: "image";
   } | null;
 }>;
+// Variable: GET_ALL_POSTS_QUERY
+// Query: *[_type == "post"] | order(publishedAt desc) {        _id, title, slug, mainImage    }
+export type GET_ALL_POSTS_QUERYResult = Array<{
+  _id: string;
+  title: string | null;
+  slug: Slug | null;
+  mainImage: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+  } | null;
+}>;
 
 // Query TypeMap
 import "@sanity/client";
@@ -277,5 +297,6 @@ declare module "@sanity/client" {
   interface SanityQueries {
     "\n    *[_type == \"post\" && slug.current == $slug][0] {\n        _id, publishedAt, title, body[], mainImage, subpagesAmount, daysMakingAmount, websiteLink, websiteName\n    }    \n": GET_SINGLE_POST_QUERYResult;
     "\n    *[_type == \"post\"] | order(publishedAt desc)[0...9] {\n        _id, title, slug, mainImage\n    }    \n": GET_RECENT_POSTS_QUERYResult;
+    "\n    *[_type == \"post\"] | order(publishedAt desc) {\n        _id, title, slug, mainImage\n    }    \n": GET_ALL_POSTS_QUERYResult;
   }
 }

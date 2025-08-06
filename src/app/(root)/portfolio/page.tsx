@@ -1,4 +1,4 @@
-import RecentPostsSection from '@/components/sections/RecentPostsSection'
+import AllPostsSection from '@/components/sections/AllPostsSection'
 import SubPageHero from '@/components/sections/SubPageHero'
 import React from 'react'
 
@@ -6,7 +6,7 @@ function PortfolioPage() {
   return (
     <>
         <SubPageHero title='Moje projekty' />
-        <RecentPostsSection />
+        <AllPostsSection />
     </>
   )
 }

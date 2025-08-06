@@ -11,3 +11,9 @@ export const GET_RECENT_POSTS_QUERY = defineQuery(`
         _id, title, slug, mainImage
     }    
 `)
+
+export const GET_ALL_POSTS_QUERY = defineQuery(`
+    *[_type == "post"] | order(publishedAt desc) {
+        _id, title, slug, mainImage
+    }    
+`)
