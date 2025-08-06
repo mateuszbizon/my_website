@@ -24,7 +24,7 @@ async function PostPage({ params }: Props) {
 
   return (
     <>
-        <header className='relative pt-section-padding pb-[calc(theme(padding.section-padding)*3)] z-0'>
+        <header className='relative py-section-padding lg:py-[calc(theme(padding.section-padding)*2)] z-0'>
             <Container>
                 <h1 className='heading1 text-center'>{post.title}</h1>
             </Container>
