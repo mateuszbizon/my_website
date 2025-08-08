@@ -1,8 +1,9 @@
 import HowProjectWork from '@/components/sections/HowProjectWork'
 import OfferAbout from '@/components/sections/OfferAbout'
+import OfferPluses from '@/components/sections/OfferPluses'
 import Questions from '@/components/sections/Questions'
 import SubPageHero from '@/components/sections/SubPageHero'
-import { BARBER_OFFER } from '@/constants/offerInfo'
+import { BARBER_OFFER, WEB_SITE_PLUSES } from '@/constants/offerInfo'
 import React from 'react'
 
 function OfferBarberPage() {
@@ -10,6 +11,7 @@ function OfferBarberPage() {
     <>
         <SubPageHero title='Strona internetowa dla fryzjerów' />
         <OfferAbout title={BARBER_OFFER.title} description={BARBER_OFFER.description} features={BARBER_OFFER.list} />
+        <OfferPluses plusesList={WEB_SITE_PLUSES} />
         <HowProjectWork />
         <Questions />
     </>

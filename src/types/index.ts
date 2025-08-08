@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react";
+
 export type Image = {
     src: string;
     alt: string;
@@ -34,4 +36,10 @@ export type Offer = {
     title: string;
     description: string;
     list: string[];
+}
+
+export type OfferPluses = {
+    title: string;
+    description: string;
+    icon: LucideIcon;
 }

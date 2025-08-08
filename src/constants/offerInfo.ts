@@ -1,4 +1,5 @@
-import { Offer } from "@/types";
+import { Offer, OfferPluses } from "@/types";
+import { Briefcase, Clock, Database, Globe, LayoutDashboard, LineChart, Monitor } from "lucide-react";
 
 export const BARBER_OFFER: Offer = {
     title: "Strona internetowa dla salonu fryzjerskiego, która przyciąga klientów",
@@ -63,3 +64,36 @@ export const GOOGLE_POSITION_OFFER: Offer = {
         "Optymalizacja pod kątem słów kluczowych",
     ]
 }
+
+export const WEB_SITE_PLUSES: OfferPluses[] = [
+    {
+        title: "Szerszy zasięg",
+        description: "Strona internetowa otwiera Twoją firmę na klientów spoza lokalnego rynku, umożliwiając dotarcie do nowych odbiorców.",
+        icon: Globe
+    },
+    {
+        title: "Dostępność 24/7",
+        description: "Twoja witryna pracuje dla Ciebie przez całą dobę – klienci mogą zapoznać się z ofertą i skontaktować o dowolnej porze.",
+        icon: Clock
+    },
+    {
+        title: "Wzmacnianie wizerunku",
+        description: "Estetyczny projekt sprawia, że firma jest postrzegana jako nowoczesna, wiarygodna i profesjonalna.",
+        icon: Briefcase
+    },
+    {
+        title: "Przewaga konkurencyjna",
+        description: "Obecność w internecie daje Ci przewagę nad tymi, którzy wciąż opierają się wyłącznie na tradycyjnej reklamie.",
+        icon: LineChart
+    },
+    {
+        title: "Aktualny design",
+        description: "Nowoczesna strona pokazuje, że firma nadąża za trendami i potrafi dostosować się do zmieniających się potrzeb klientów.",
+        icon: LayoutDashboard
+    },
+    {
+        title: "Analiza i rozwój",
+        description: "Witryna umożliwia zbieranie danych o odwiedzających, co pomaga w doskonaleniu oferty i planowaniu dalszego rozwoju.",
+        icon: Database
+    },
+]
