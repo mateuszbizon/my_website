@@ -29,3 +29,9 @@ export type Question = {
     question: string;
     answer: string;
 }
+
+export type Offer = {
+    title: string;
+    description: string;
+    list: string[];
+}
