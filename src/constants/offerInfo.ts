@@ -12,3 +12,16 @@ export const BARBER_OFFER: Offer = {
         "Dane kontaktowe z mapą dojazdu"
     ]
 }
+
+export const LANGUAGE_SCHOOL_OFFER: Offer = {
+    title: "Nowoczesna strona dla szkoły językowej",
+    description: "Witryna, która w przejrzysty sposób zaprezentuje Twoje kursy, harmonogram i zachęci do zapisów",
+    list: [
+        "Strona główna z przedstawieniem szkoły",
+        "Oferta kursów z cenami i poziomami",
+        "Harmonogram zajęć",
+        "Opinie uczniów",
+        "Formularz zapisu online",
+        "Kontakt i mapa dojazdu"
+    ]
+}
