@@ -51,3 +51,15 @@ export const CUSTOM_WEB_SITE_OFFER: Offer = {
         "Integracje z narzędziami (np. systemy rezerwacji, płatności online)"
     ]
 }
+
+export const GOOGLE_POSITION_OFFER: Offer = {
+    title: "Bądź widoczny w Google i przyciągaj lokalnych klientów",
+    description: "Kompleksowa optymalizacja Twojej wizytówki Google Moja Firma, aby łatwiej docierać do osób w Twojej okolicy.",
+    list: [
+        "Uzupełnienie i optymalizacja wszystkich danych",
+        "Dodanie zdjęć i grafik przyciągających uwagę",
+        "Wybór odpowiednich kategorii działalności",
+        "Publikowanie aktualności i ofert",
+        "Optymalizacja pod kątem słów kluczowych",
+    ]
+}
