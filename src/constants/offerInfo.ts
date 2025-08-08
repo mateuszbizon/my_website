@@ -38,3 +38,16 @@ export const RESTAURANT_OFFER: Offer = {
         "Lokalizacja i kontakt"
     ]
 }
+
+export const CUSTOM_WEB_SITE_OFFER: Offer = {
+    title: "Strona internetowa szyta na miarę Twojego biznesu",
+    description: "Indywidualny projekt dopasowany do Twojej branży, celów i budżetu.",
+    list: [
+        "Strona główna z najważniejszymi informacjami",
+        "Oferta lub portfolio",
+        "Formularze kontaktowe lub rezerwacyjne",
+        "Opinie klientów",
+        "Blog lub aktualności",
+        "Integracje z narzędziami (np. systemy rezerwacji, płatności online)"
+    ]
+}
