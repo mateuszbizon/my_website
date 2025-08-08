@@ -11,7 +11,7 @@ type OfferAboutProps = {
 
 function OfferAbout({ title, description, features }: OfferAboutProps) {
   return (
-    <section className='py-section-padding'>
+    <section className='py-section-padding bg-gradient-to-br from-background-light to-background'>
         <Container>
             <div className='grid md:grid-cols-2 gap-10'>
                 <div className='space-y-7'>
