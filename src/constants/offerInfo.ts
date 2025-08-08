@@ -25,3 +25,16 @@ export const LANGUAGE_SCHOOL_OFFER: Offer = {
         "Kontakt i mapa dojazdu"
     ]
 }
+
+export const RESTAURANT_OFFER: Offer = {
+    title: "Strona internetowa restauracji, która zwiększa liczbę rezerwacji",
+    description: "Apetyczna prezentacja menu i klimatu lokalu w sieci, dostępna na każdym urządzeniu.",
+    list: [
+        "Strona główna z opisem restauracji",
+        "Menu w wersji online",
+        "Galeria zdjęć potraw i wnętrza",
+        "Opinie gości",
+        "Możliwość zamawiania online np. z Glovo",
+        "Lokalizacja i kontakt"
+    ]
+}
