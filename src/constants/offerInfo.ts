@@ -1,5 +1,5 @@
 import { Offer, OfferPluses } from "@/types";
-import { Briefcase, Clock, Database, Globe, LayoutDashboard, LineChart, Monitor } from "lucide-react";
+import { BadgeCheck, BarChart, Briefcase, Camera, Clock, Database, Globe, LayoutDashboard, LineChart, Search, Users } from "lucide-react";
 
 export const BARBER_OFFER: Offer = {
     title: "Strona internetowa dla salonu fryzjerskiego, która przyciąga klientów",
@@ -95,5 +95,38 @@ export const WEB_SITE_PLUSES: OfferPluses[] = [
         title: "Analiza i rozwój",
         description: "Witryna umożliwia zbieranie danych o odwiedzających, co pomaga w doskonaleniu oferty i planowaniu dalszego rozwoju.",
         icon: Database
+    },
+]
+
+export const GOOGLE_POSITION_PLUSES: OfferPluses[] = [
+    {
+        title: "Więcej lokalnych klientów",
+        description: "Dobra widoczność w Google sprawia, że klienci z Twojej okolicy szybciej trafią właśnie do Ciebie.",
+        icon: Users
+    },
+    {
+        title: "Działanie bez przerwy",
+        description: "Twoja wizytówka jest dostępna o każdej porze, nawet gdy firma jest zamknięta.",
+        icon: Clock
+    },
+    {
+        title: "Lepszy odbiór marki",
+        description: "Pełne i atrakcyjne informacje w wizytówce podnoszą zaufanie do Twojej firmy.",
+        icon: BadgeCheck
+    },
+    {
+        title: "Przewaga w wynikach wyszukiwania",
+        description: "Dobrze zoptymalizowana wizytówka pojawia się wyżej od konkurencji w Google i Google Maps.",
+        icon: Search
+    },
+    {
+        title: "Atrakcyjna prezentacja",
+        description: "Zdjęcia, filmy i aktualności przyciągają uwagę i zachęcają do kontaktu.",
+        icon: Camera
+    },
+    {
+        title: "Śledzenie efektów",
+        description: "Dzięki statystykom Google łatwo sprawdzisz, ilu klientów znalazło Cię dzięki wizytówce.",
+        icon: BarChart
     },
 ]
