@@ -19,3 +19,8 @@ export const RESTAURANT_IMAGE: Image = {
     src: "/restaurant_img.png",
     alt: "Ikona przedstawiająca klienta w restauracji a obok stoi kelnerka trzymająca menu.",
 }
+
+export const WEB_SITE_IMAGE: Image = {
+    src: "/web_site_img.png",
+    alt: "Ikona przedstawiająca osoby które omawiają projekt strony internetowej.",
+}
