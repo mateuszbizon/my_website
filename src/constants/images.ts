@@ -14,3 +14,8 @@ export const LANGUAGE_SCHOOL_IMAGE: Image = {
     src: "/language_school_img.png",
     alt: "Ikona przedstawiająca nauczyciela i ucznia stojących przed tablicą.",
 }
+
+export const RESTAURANT_IMAGE: Image = {
+    src: "/restaurant_img.png",
+    alt: "Ikona przedstawiająca klienta w restauracji a obok stoi kelnerka trzymająca menu.",
+}
