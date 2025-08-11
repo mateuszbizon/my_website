@@ -2,14 +2,18 @@ import React from 'react'
 import Container from '../ui/container'
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import { Image as ImageType } from '@/types'
+import { BARBER_IMAGE } from '@/constants/images'
+import Image from 'next/image'
 
 type OfferAboutProps = {
     title: string;
     description: string;
     features: string[];
+    image?: ImageType
 }
 
-function OfferAbout({ title, description, features }: OfferAboutProps) {
+function OfferAbout({ title, description, features, image = BARBER_IMAGE }: OfferAboutProps) {
   return (
     <section className='py-section-padding bg-gradient-to-br from-background-light to-background'>
         <Container>
@@ -42,14 +46,11 @@ function OfferAbout({ title, description, features }: OfferAboutProps) {
                     </div>
                 </div>
 
-                {/* <div>
+                <div>
                     <figure className='relative aspect-square max-w-[800px] mx-auto'>
-                        <Image src={ABOUT_IMAGE.src} alt={ABOUT_IMAGE.alt} fill className='object-cover rounded-4xl' />
-                        <span className='absolute -bottom-10 -translate-x-1/2 left-1/2 bg-primary text-background-light p-5 rounded-md text-center text-lg'>
-                            <span className='text-3xl md:text-4xl font-medium'>5+</span> <br /> lat doświadczenia
-                        </span>
+                        <Image src={image.src} alt={image.alt} fill className='object-cover rounded-4xl' />
                     </figure>
-                </div> */}
+                </div>
             </div>
         </Container>
     </section>
