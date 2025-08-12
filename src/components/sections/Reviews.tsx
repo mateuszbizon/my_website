@@ -37,7 +37,7 @@ function Reviews() {
             </Carousel>
             <div className='flex justify-center'>
                 <Button variant={"secondary"} size={"lg"} asChild>
-                    <Link href={"/"}>
+                    <Link href={"https://www.facebook.com/profile.php?id=61564441419761&sk=reviews"} target='_blank'>
                         Wszystkie opinie
                     </Link>
                 </Button>
