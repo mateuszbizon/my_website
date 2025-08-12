@@ -18,7 +18,7 @@ function Offer() {
                     </p>
                     <div className='flex justify-center'>
                         <Button asChild>
-                            <Link href={"/"}>
+                            <Link href={"/oferta/strona-fryzjerow"}>
                                 Dowiedz się więcej
                             </Link>
                         </Button>
@@ -33,7 +33,7 @@ function Offer() {
                     </p>
                     <div className='flex justify-center'>
                         <Button asChild>
-                            <Link href={"/"}>
+                            <Link href={"/oferta/strona-szkol-jezykowych"}>
                                 Dowiedz się więcej
                             </Link>
                         </Button>
@@ -48,7 +48,7 @@ function Offer() {
                     </p>
                     <div className='flex justify-center'>
                         <Button asChild>
-                            <Link href={"/"}>
+                            <Link href={"/oferta/strona-restauracji"}>
                                 Dowiedz się więcej
                             </Link>
                         </Button>
@@ -63,7 +63,7 @@ function Offer() {
                     </p>
                     <div className='flex justify-center'>
                         <Button asChild>
-                            <Link href={"/"}>
+                            <Link href={"/oferta/strona-niestandardowa"}>
                                 Dowiedz się więcej
                             </Link>
                         </Button>
@@ -78,7 +78,7 @@ function Offer() {
                     </p>
                     <div className='flex justify-center'>
                         <Button asChild>
-                            <Link href={"/"}>
+                            <Link href={"/oferta/pozycjonowanie-wizytowki"}>
                                 Dowiedz się więcej
                             </Link>
                         </Button>
