@@ -1,7 +1,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
-function useShowItems(targets: gsap.TweenTarget = ".item", delay: gsap.TweenValue | undefined = 0, sectionName: string = "#offer") {
+function useShowItems(targets: gsap.TweenTarget, delay: gsap.TweenValue | undefined = 0, sectionName: gsap.DOMTarget | undefined = "#offer") {
     useGSAP(() => {
         const timeline = gsap.timeline({
             scrollTrigger: {
