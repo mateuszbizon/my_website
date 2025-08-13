@@ -6,20 +6,20 @@ import { Languages, LayoutDashboard, MapPin, Scissors, UtensilsCrossed } from 'l
 import { Button } from '../ui/button'
 import Link from 'next/link'
 import useShowHeading2 from '@/lib/hooks/useShowHeading2'
-import useShowItems from '@/lib/hooks/useShowItems'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import useShowItems from '@/lib/hooks/useShowItems'
 
 gsap.registerPlugin(ScrollTrigger)
 
 function Offer() {
-    useShowHeading2()
+    useShowHeading2(".offer-title")
     useShowItems(".item", 0.5)
 
   return (
     <section id='offer' className='py-section-padding'>
         <Container>
-            <h2 className='heading2 heading-margin-bottom text-center'>Sprawdź co mogę zaoferować dla Ciebie lub Twojej firmy</h2>
+            <h2 className='offer-title heading2 heading-margin-bottom text-center'>Sprawdź co mogę zaoferować dla Ciebie lub Twojej firmy</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 <div className='item offer-card group'>
                     <Scissors className='offer-card-icon' />

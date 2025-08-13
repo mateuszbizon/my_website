@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Container from '../ui/container'
 import ContactForm from '../forms/ContactForm'
@@ -7,12 +9,15 @@ import Link from 'next/link'
 import { Button } from '../ui/button'
 import Image from 'next/image'
 import { ABOUT_IMAGE } from '@/constants/images'
+import useShowHeading2 from '@/lib/hooks/useShowHeading2'
 
 function Contact() {
+    useShowHeading2(".contact-title", "#contact")
+
   return (
-    <section className='py-section-padding'>
+    <section id='contact' className='py-section-padding'>
         <Container>
-            <h2 className='heading2 text-center heading-margin-bottom'>Skontaktuj się ze mną</h2>
+            <h2 className='contact-title heading2 text-center heading-margin-bottom'>Skontaktuj się ze mną</h2>
             <div className='flex flex-col lg:flex-row gap-8 lg:gap-0'>
                 <div>
                     <div className='lg:w-[400px] rounded-2xl bg-background p-7 flex flex-col gap-10'>

@@ -8,16 +8,23 @@ import ReviewCard from '../cards/ReviewCard'
 import { REVIEWS_LIST } from '@/constants/reviews'
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import useShowHeading2 from '@/lib/hooks/useShowHeading2'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+
+gsap.registerPlugin(ScrollTrigger)
 
 function Reviews() {
     const plugin = React.useRef(
         Autoplay({ delay: 2000, stopOnInteraction: true })
     )
 
+    useShowHeading2(".reviews-title", "#reviews")
+
   return (
-    <section className='bg-primary py-section-padding text-background-light'>
+    <section id='reviews' className='bg-primary py-section-padding text-background-light'>
         <Container>
-            <h2 className='heading2 text-center heading-margin-bottom'>Co inni mówią o mnie</h2>
+            <h2 className='reviews-title heading2 text-center heading-margin-bottom'>Co inni mówią o mnie</h2>
             <Carousel
                 opts={{
                     loop: true

@@ -1,7 +1,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
-function useShowHeading2(headingName: gsap.TweenTarget = ".heading2", sectionName: string = "#offer") {
+function useShowHeading2(headingName: gsap.TweenTarget, sectionName: gsap.DOMTarget | undefined = "#offer") {
     useGSAP(() => {
         const timeline = gsap.timeline({
             scrollTrigger: {
