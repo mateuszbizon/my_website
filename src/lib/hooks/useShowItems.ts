@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/all'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function useShowHeading2(headingName: gsap.TweenTarget = ".heading2", sectionName: string = "#offer") {
+function useShowItems(targets: gsap.TweenTarget = ".item", delay: gsap.TweenValue | undefined = 0, sectionName: string = "#offer") {
     useGSAP(() => {
         const timeline = gsap.timeline({
             scrollTrigger: {
@@ -14,15 +14,17 @@ function useShowHeading2(headingName: gsap.TweenTarget = ".heading2", sectionNam
             }
         })
 
-        timeline.fromTo(headingName, {
+        timeline.fromTo(targets, {
             opacity: 0,
             y: 100
         }, {
             opacity: 1,
             y: 0,
             duration: 1,
+            stagger: 0.5,
+            delay
         })
     }, [])
 }
 
-export default useShowHeading2
+export default useShowItems
