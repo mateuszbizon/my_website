@@ -1,8 +1,5 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
-
-gsap.registerPlugin(ScrollTrigger)
 
 function useShowHeading2(headingName: gsap.TweenTarget = ".heading2", sectionName: string = "#offer") {
     useGSAP(() => {

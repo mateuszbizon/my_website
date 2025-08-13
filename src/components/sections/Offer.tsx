@@ -7,6 +7,10 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 import useShowHeading2 from '@/lib/hooks/useShowHeading2'
 import useShowItems from '@/lib/hooks/useShowItems'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+
+gsap.registerPlugin(ScrollTrigger)
 
 function Offer() {
     useShowHeading2()
