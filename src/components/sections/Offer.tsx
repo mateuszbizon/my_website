@@ -1,12 +1,17 @@
+"use client"
+
 import React from 'react'
 import Container from '../ui/container'
 import { Languages, LayoutDashboard, MapPin, Scissors, UtensilsCrossed } from 'lucide-react'
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import useShowHeading2 from '@/lib/hooks/useShowHeading2'
 
 function Offer() {
+    useShowHeading2()
+
   return (
-    <section className='py-section-padding'>
+    <section id='offer' className='py-section-padding'>
         <Container>
             <h2 className='heading2 heading-margin-bottom text-center'>Sprawdź co mogę zaoferować dla Ciebie lub Twojej firmy</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
