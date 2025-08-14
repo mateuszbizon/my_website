@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import Container from '../ui/container'
 import RecentPosts from '../posts/RecentPosts'
+import PostsLoading from '../loadings/PostsLoading'
 
 function RecentPostsSection() {
   return (
@@ -10,7 +11,7 @@ function RecentPostsSection() {
             <p className='bigger-text text-center heading-margin-bottom'>
                 Poniżej przedstawiam kilka moich ostatnich projektów
             </p>
-            <Suspense>
+            <Suspense fallback={<PostsLoading />}>
                 <RecentPosts />
             </Suspense>
         </Container>

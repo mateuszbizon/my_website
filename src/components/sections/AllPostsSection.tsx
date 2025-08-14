@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import Container from '../ui/container'
 import AllPosts from '../posts/AllPosts'
+import PostsLoading from '../loadings/PostsLoading'
 
 function AllPostsSection() {
   return (
@@ -10,7 +11,7 @@ function AllPostsSection() {
             <p className='bigger-text text-center heading-margin-bottom'>
                 Poniżej przedstawiam wszystkie moje projekty
             </p>
-            <Suspense>
+            <Suspense fallback={<PostsLoading />}>
                 <AllPosts />
             </Suspense>
         </Container>
