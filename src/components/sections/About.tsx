@@ -1,17 +1,22 @@
+"use client"
+
 import React from 'react'
 import Container from '../ui/container'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ABOUT_IMAGE } from '@/constants/images'
 import { Button } from '../ui/button'
+import useShowHeading2 from '@/lib/hooks/useShowHeading2'
 
 function About() {
+    useShowHeading2(".about-title", "#about")
+
   return (
-    <section className='py-section-padding bg-gradient-to-br from-background-light to-background'>
+    <section id='about' className='py-section-padding bg-gradient-to-br from-background-light to-background'>
         <Container>
             <div className='grid md:grid-cols-2 gap-10'>
                 <div className='space-y-7'>
-                    <h2 className='heading2'>Poznaj twórcę stron internetowych</h2>
+                    <h2 className='about-title heading2'>Poznaj twórcę stron internetowych</h2>
                     <div className='space-y-5 text-lg'>
                         <p>
                             <strong>Cześć! Nazywam się Mateusz Bizoń i zajmuję się projektowaniem i tworzeniem stron internetowych.</strong> Od 2019 zacząłem swoją przygodę z tworzeniem stron internetowych, a od 2025 roku postanowiłem skupić się na tym bardziej na poważnie, oferując swoje usługi dla firm.
