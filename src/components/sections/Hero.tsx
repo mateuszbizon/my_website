@@ -57,7 +57,7 @@ function Hero() {
                     <div className='flex justify-center gap-5 flex-wrap'>
                         <Button className='button' size={"lg"}>
                             <Link href={"/portfolio"}>
-                                Zobacz
+                                Zobacz portfolio
                             </Link>
                         </Button>
                         <Button className='button' size={"lg"} variant={"outline"}>
