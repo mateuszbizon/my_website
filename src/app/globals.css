@@ -74,7 +74,7 @@
     }
 
     .offer-card {
-        @apply text-center space-y-7 rounded-2xl p-7 bg-background shadow-xl shadow-background-dark
+        @apply text-center flex flex-col gap-y-7 rounded-2xl p-7 bg-background shadow-xl shadow-background-dark
     }
 
     .offer-card-icon {

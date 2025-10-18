@@ -27,7 +27,7 @@ function Offer() {
                     <p className='text-lg'>
                         Profesjonalna strona internetowa dla salonów fryzjerskich z łatwą prezentacją oferty, cennika i możliwością rezerwacji wizyt online.
                     </p>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center mt-auto'>
                         <Button asChild>
                             <Link href={"/oferta/strona-fryzjerow"}>
                                 Dowiedz się więcej
@@ -42,7 +42,7 @@ function Offer() {
                     <p className='text-lg'>
                         Strona idealna dla szkół językowych – z sekcją kursów, grafikami zajęć i możliwością zapisu na lekcje próbne.
                     </p>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center mt-auto'>
                         <Button asChild>
                             <Link href={"/oferta/strona-szkol-jezykowych"}>
                                 Dowiedz się więcej
@@ -57,7 +57,7 @@ function Offer() {
                     <p className='text-lg'>
                         Atrakcyjne wizualnie strony restauracji z menu, zdjęciami dań i integracją z Google Maps czy systemem zamawiania.
                     </p>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center mt-auto'>
                         <Button asChild>
                             <Link href={"/oferta/strona-restauracji"}>
                                 Dowiedz się więcej
@@ -72,7 +72,7 @@ function Offer() {
                     <p className='text-lg'>
                          Tworzę również strony dopasowane do indywidualnych potrzeb Twojego biznesu – od projektu po wdrożenie.
                     </p>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center mt-auto'>
                         <Button asChild>
                             <Link href={"/oferta/strona-niestandardowa"}>
                                 Dowiedz się więcej
@@ -87,7 +87,7 @@ function Offer() {
                     <p className='text-lg'>
                         Zadbam o to, aby Twoja firma była dobrze widoczna w Google – optymalizacja wizytówki Google Moja Firma krok po kroku.
                     </p>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center mt-auto'>
                         <Button asChild>
                             <Link href={"/oferta/pozycjonowanie-wizytowki"}>
                                 Dowiedz się więcej
