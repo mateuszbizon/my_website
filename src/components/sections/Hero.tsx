@@ -55,12 +55,12 @@ function Hero() {
                         Tworzę nowoczesne strony dla firm, które nie tylko dobrze wyglądają, ale też skutecznie sprzedają. Zadbam również o widoczność Twojej wizytówki w Google, by lokalni klienci mogli Cię łatwo znaleźć.
                     </p>
                     <div className='flex justify-center gap-5 flex-wrap'>
-                        <Button className='button' size={"lg"}>
+                        <Button className='button' size={"lg"} asChild>
                             <Link href={"/portfolio"}>
                                 Zobacz portfolio
                             </Link>
                         </Button>
-                        <Button className='button' size={"lg"} variant={"outline"}>
+                        <Button className='button' size={"lg"} variant={"outline"} asChild>
                             <Link href={"/oferta"}>
                                 Sprawdź ofertę
                             </Link>
