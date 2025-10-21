@@ -271,7 +271,7 @@ export type GET_RECENT_POSTS_QUERYResult = Array<{
   } | null;
 }>;
 // Variable: GET_ALL_POSTS_QUERY
-// Query: *[_type == "post"] | order(publishedAt desc) {        _id, title, slug, mainImage    }
+// Query: *[_type == "post"] | order(publishedAt desc) {        _id, title, slug, mainImage, _createdAt    }
 export type GET_ALL_POSTS_QUERYResult = Array<{
   _id: string;
   title: string | null;
@@ -289,6 +289,7 @@ export type GET_ALL_POSTS_QUERYResult = Array<{
     alt?: string;
     _type: "image";
   } | null;
+  _createdAt: string;
 }>;
 
 // Query TypeMap
@@ -297,6 +298,6 @@ declare module "@sanity/client" {
   interface SanityQueries {
     "\n    *[_type == \"post\" && slug.current == $slug][0] {\n        _id, publishedAt, title, body[], mainImage, subpagesAmount, daysMakingAmount, websiteLink, websiteName\n    }    \n": GET_SINGLE_POST_QUERYResult;
     "\n    *[_type == \"post\"] | order(publishedAt desc)[0...9] {\n        _id, title, slug, mainImage\n    }    \n": GET_RECENT_POSTS_QUERYResult;
-    "\n    *[_type == \"post\"] | order(publishedAt desc) {\n        _id, title, slug, mainImage\n    }    \n": GET_ALL_POSTS_QUERYResult;
+    "\n    *[_type == \"post\"] | order(publishedAt desc) {\n        _id, title, slug, mainImage, _createdAt\n    }    \n": GET_ALL_POSTS_QUERYResult;
   }
 }
