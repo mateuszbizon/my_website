@@ -17,8 +17,8 @@ function PrivatePolicyPage() {
                         <p>
                             Niniejsza Polityka Prywatności opisuje zasady przetwarzania danych osobowych na stronie{" "}
                             <Button variant={"link"} size={"link"} asChild>
-                                <Link href={"https://mateuszbizonweb.pl"} target="_blank">
-                                    mateuszbizonweb.pl
+                                <Link href={"https://www.mateuszbizonweb.pl"} target="_blank">
+                                    www.mateuszbizonweb.pl
                                 </Link>
                             </Button> 
                             {" "}(dalej: Strona).
