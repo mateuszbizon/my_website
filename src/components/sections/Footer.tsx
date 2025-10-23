@@ -96,9 +96,16 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='mt-section-padding flex justify-between items-center'>
+            <div className='mt-section-padding flex justify-between flex-wrap gap-3 items-center'>
                 <p>
                     &copy; {new Date().getFullYear()} | <span className='font-semibold'>Mateusz Bizoń</span>
+                </p>
+                <p>
+                    <Button variant={"link"} size={"link"} className='text-white hover:text-white/50' asChild>
+                        <Link href="/polityka-prywatnosci">
+                            Polityka prywatności
+                        </Link>
+                    </Button>
                 </p>
             </div>
         </Container>
