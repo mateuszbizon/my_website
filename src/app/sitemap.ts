@@ -56,6 +56,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/polityka-prywatnosci`,
+      lastModified: new Date(),
+      priority: 0.8,
+    },
     ...postLinks
   ]
 }
