@@ -34,7 +34,7 @@ function Contact() {
                                 </div>
                                 <span className='text-lg'>Adres email</span>
                             </div>
-                            <Button variant={"link"} size={"link"} className='text-foreground hover:text-foreground/70' asChild>
+                            <Button variant={"link"} size={"link"} className='text-foreground hover:text-primary' asChild>
                                 <Link href={`mailto:${EMAIL}`}>
                                     {EMAIL}
                                 </Link>
@@ -47,7 +47,7 @@ function Contact() {
                                 </div>
                                 <span className='text-lg'>Telefon</span>
                             </div>
-                            <Button variant={"link"} size={"link"} className='text-foreground hover:text-foreground/70' asChild>
+                            <Button variant={"link"} size={"link"} className='text-foreground hover:text-primary' asChild>
                                 <Link href={`tel:${PHONE}`}>
                                     {PHONE}
                                 </Link>
