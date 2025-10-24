@@ -10,6 +10,8 @@ import { Button } from '../ui/button'
 import { Textarea } from '../ui/textarea'
 import { createClientRecord } from '@/lib/services/airtable'
 import { toast } from 'react-toastify'
+import { Checkbox } from '../ui/checkbox'
+import Link from 'next/link'
 
 function ContactForm() {
     const form = useForm<ContactSchema>({
@@ -18,7 +20,8 @@ function ContactForm() {
             name: "",
             email: "",
             phone: "",
-            message: ""
+            message: "",
+            consent: false
         }
     })
     const { formState: { isSubmitting } } = form
@@ -85,6 +88,32 @@ function ContactForm() {
                         <FormControl>
                             <Textarea placeholder='Wpisz tutaj swoją wiadomość' {...field}></Textarea>
                         </FormControl>
+                        <FormMessage />
+                    </FormItem>
+                )}
+            />
+            <FormField
+                control={form.control}
+                name='consent'
+                render={({ field }) => (
+                    <FormItem>
+                        <div className='flex gap-3'>
+                            <FormControl>
+                                <Checkbox 
+                                    checked={field.value} 
+                                    onCheckedChange={(checked) => field.onChange(Boolean(checked))}
+                                    ref={field.ref}
+                                />
+                            </FormControl>
+                            <FormLabel className='block'>
+                                Wyrażam zgodę na przetwarzanie danych osobowych. Wiecej informacji jak dane osobowe są przetwarzane, znajdziesz w {" "}
+                                <Button variant={"link"} size={"link"} className='text-sm' asChild>
+                                    <Link href='/polityka-prywatnosci' target='_blank'>
+                                        Polityce prywatności
+                                    </Link>
+                                </Button>
+                            </FormLabel>
+                        </div>
                         <FormMessage />
                     </FormItem>
                 )}
