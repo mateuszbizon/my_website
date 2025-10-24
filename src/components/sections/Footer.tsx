@@ -8,7 +8,7 @@ import { EMAIL, PHONE } from '@/constants'
 
 function Footer() {
   return (
-    <footer className='pt-section-padding pb-10 bg-foreground text-white'>
+    <footer className='pt-section-padding pb-7 bg-foreground text-white'>
         <Container className='max-w-[1400px]'>
             <div className='grid md:grid-cols-[repeat(auto-fit,_280px)] gap-10 md:gap-20'>
                 <div className='space-y-4 text-center md:text-left'>
