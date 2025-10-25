@@ -29,3 +29,8 @@ export const GOOGLE_POSITION_IMAGE: Image = {
     src: "/google_position_img.png",
     alt: "Ikona przedstawiająca osobę siedzącą przed laptopem. Na laptopie jest logo Google.",
 }
+
+export const LOGO: Image = {
+    src: "/logo.png",
+    alt: "Ikona przedstawiająca logo - inicjały autora strony.",
+}

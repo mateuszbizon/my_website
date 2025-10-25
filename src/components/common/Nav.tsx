@@ -9,6 +9,8 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '../ui/na
 import NavCard from '../cards/NavCard'
 import { NAV_ITEMS } from '@/constants/navItems'
 import NavMobile from './NavMobile'
+import Image from 'next/image'
+import { LOGO } from '@/constants/images'
 
 function Nav() {
     const { isScrolled } = useScroll({ scrollAmount: 50 })
@@ -19,7 +21,9 @@ function Nav() {
             <div className='flex justify-between items-center h-full'>
                 <div>
                     <Link href={"/"} title='Strona główna'>
-                        <span className='text-lg'>MB</span>
+                        <figure className='relative size-12'>
+                            <Image src={LOGO.src} alt={LOGO.alt} fill />
+                        </figure>
                     </Link>
                 </div>
                 <div className='hidden lg:flex'>

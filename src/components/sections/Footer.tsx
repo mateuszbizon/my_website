@@ -5,6 +5,8 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 import { Mail, Phone } from 'lucide-react'
 import { EMAIL, PHONE } from '@/constants'
+import { LOGO } from '@/constants/images'
+import Image from 'next/image'
 
 function Footer() {
   return (
@@ -12,9 +14,9 @@ function Footer() {
         <Container className='max-w-[1400px]'>
             <div className='grid md:grid-cols-[repeat(auto-fit,_280px)] gap-10 md:gap-20'>
                 <div className='space-y-4 text-center md:text-left'>
-                    <p className='bigger-text'>
-                        Mateusz Bizoń
-                    </p>
+                    <figure className='relative size-16'>
+                        <Image src={LOGO.src} alt={LOGO.alt} fill />
+                    </figure>
                     <p className='md:text-lg'>
                         <em>
                             Tworzę nowoczesne strony dla firm, które nie tylko dobrze wyglądają, ale też skutecznie sprzedają. Zadbam również o widoczność Twojej wizytówki w Google, by lokalni klienci mogli Cię łatwo znaleźć.
@@ -96,7 +98,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='mt-section-padding flex justify-between flex-wrap gap-3 items-center'>
+            <div className='mt-section-padding flex flex-col sm:flex-row justify-between gap-3 items-center'>
                 <p>
                     &copy; {new Date().getFullYear()} | <span className='font-semibold'>Mateusz Bizoń</span>
                 </p>
