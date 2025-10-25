@@ -27,31 +27,33 @@ function Contact() {
                             </figure>
                             <p className='text-center little-bigger-text font-medium'>Mateusz Bizoń</p>
                         </div>
-                        <div className='space-y-3'>
-                            <div className='flex gap-3 items-center'>
-                                <div className='p-3 rounded-xl bg-background-dark'>
-                                    <Mail className='size-8' />
+                        <div className='flex sm:justify-center lg:justify-start flex-wrap gap-10'>
+                            <div className='space-y-3'>
+                                <div className='flex gap-3 items-center'>
+                                    <div className='p-3 rounded-xl bg-background-dark'>
+                                        <Mail className='size-8' />
+                                    </div>
+                                    <span className='text-lg'>Adres email</span>
                                 </div>
-                                <span className='text-lg'>Adres email</span>
+                                <Button variant={"link"} size={"link"} className='text-foreground hover:text-primary' asChild>
+                                    <Link href={`mailto:${EMAIL}`}>
+                                        {EMAIL}
+                                    </Link>
+                                </Button>
                             </div>
-                            <Button variant={"link"} size={"link"} className='text-foreground hover:text-primary' asChild>
-                                <Link href={`mailto:${EMAIL}`}>
-                                    {EMAIL}
-                                </Link>
-                            </Button>
-                        </div>
-                        <div className='space-y-3'>
-                            <div className='flex gap-3 items-center'>
-                                <div className='p-3 rounded-xl bg-background-dark'>
-                                    <Phone className='size-8' />
+                            <div className='space-y-3'>
+                                <div className='flex gap-3 items-center'>
+                                    <div className='p-3 rounded-xl bg-background-dark'>
+                                        <Phone className='size-8' />
+                                    </div>
+                                    <span className='text-lg'>Telefon</span>
                                 </div>
-                                <span className='text-lg'>Telefon</span>
+                                <Button variant={"link"} size={"link"} className='text-foreground hover:text-primary' asChild>
+                                    <Link href={`tel:${PHONE}`}>
+                                        {PHONE}
+                                    </Link>
+                                </Button>
                             </div>
-                            <Button variant={"link"} size={"link"} className='text-foreground hover:text-primary' asChild>
-                                <Link href={`tel:${PHONE}`}>
-                                    {PHONE}
-                                </Link>
-                            </Button>
                         </div>
                     </div>
                 </div>
