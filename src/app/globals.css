@@ -58,7 +58,7 @@
     }
 
     .bigger-text {
-        @apply text-lg md:text-xl xl:text-2xl font-medium
+        @apply text-xl md:text-2xl font-medium
     }
 
     .little-bigger-text {

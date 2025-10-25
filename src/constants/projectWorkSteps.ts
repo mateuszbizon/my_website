@@ -6,7 +6,7 @@ export const PROJECT_WORK_STEPS = [
         content: 'Przygotowanie wstępnej wyceny oraz zakresu prac, które zostaną wykonane.',
     },
     {
-        content: 'Pomoc w wyborze hostingu i domeny oraz konfiguracja.',
+        content: 'Pomoc w wyborze domeny oraz konfiguracja.',
     },
     {
         content: 'Podpisanie umowy i rozpoczęcie prac nad projektem.',
