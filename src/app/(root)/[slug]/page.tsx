@@ -29,18 +29,18 @@ async function PostPage({ params }: Props) {
         <section className='pb-section-padding'>
             <Container>
                 {post.mainImage && (
-                    <figure className='aspect-video relative -mt-40 md:-mt-30 rounded-xl overflow-hidden'>
+                    <figure className='aspect-video relative -mt-10 md:-mt-15 lg:-mt-30 rounded-xl overflow-hidden'>
                         <Image src={urlFor(post.mainImage).url()} alt={post.mainImage.alt || ""} fill className='object-contain' />
                     </figure>
                 )}
-                <div className='mt-20 flex flex-col md:flex-row gap-5'>
+                <div className='relative mt-20 flex flex-col lg:flex-row gap-10'>
                     <div className='grow'>
-                        <div className='prose'>
+                        <div className='prose prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:xl:text-5xl prose-h2:font-bold'>
                             {Array.isArray(post.body) && <PortableText value={post.body} />}
                         </div>
                     </div>
 
-                    <div className='flex flex-col gap-5 justify-center md:w-1/3 -order-1 md:order-2 bg-foreground text-background-light p-7 rounded-2xl'>
+                    <div className='flex flex-col gap-5 justify-center md:text-center md:items-center lg:text-left lg:items-start lg:w-1/3 -order-1 lg:order-2 bg-foreground text-background-light p-7 rounded-2xl overflow-hidden lg:sticky lg:top-nav-height h-fit'>
                         <div className='space-y-1'>
                             <p className='text-xl font-semibold'>Adres strony</p>
                             <p>
