@@ -14,7 +14,7 @@ function Footer() {
         <Container className='max-w-[1400px]'>
             <div className='grid md:grid-cols-[repeat(auto-fit,_280px)] gap-10 md:gap-20'>
                 <div className='space-y-4 text-center md:text-left'>
-                    <figure className='relative size-16'>
+                    <figure className='relative size-16 mx-auto md:mx-0'>
                         <Image src={LOGO.src} alt={LOGO.alt} fill />
                     </figure>
                     <p className='md:text-lg'>
