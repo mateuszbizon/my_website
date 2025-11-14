@@ -12,6 +12,7 @@ import { createClientRecord } from '@/lib/services/airtable'
 import { toast } from 'react-toastify'
 import { Checkbox } from '../ui/checkbox'
 import Link from 'next/link'
+import { sendInfoEmail } from '@/lib/actions/emails/sendInfoEmail'
 
 function ContactForm() {
     const form = useForm<ContactSchema>({
@@ -27,6 +28,10 @@ function ContactForm() {
     const { formState: { isSubmitting } } = form
 
     async function onSubmit(data: ContactSchema) {
+        await sendInfoEmail({
+            name: data.name
+        })
+        
         try {
             await createClientRecord(data)
             form.reset()
@@ -35,6 +40,7 @@ function ContactForm() {
             console.log(error)
             toast.error("Coś poszło nie tak. Spróbuj ponownie później")
         }
+
     }
 
   return (
