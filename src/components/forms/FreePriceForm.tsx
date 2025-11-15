@@ -12,6 +12,7 @@ import { toast } from 'react-toastify'
 import { createFreePriceRecord } from '@/lib/services/airtable'
 import { Checkbox } from '../ui/checkbox'
 import Link from 'next/link'
+import { sendNewFreePriceEmail } from '@/lib/actions/emails/sendNewFreePriceEmail'
 
 function FreePriceForm() {
     const form = useForm<FreePriceSchema>({
@@ -30,6 +31,10 @@ function FreePriceForm() {
     const { formState: { isSubmitting } } = form
 
     async function onSubmit(data: FreePriceSchema) {
+        await sendNewFreePriceEmail({
+            name: data.name
+        })
+
         try {
             await createFreePriceRecord(data)
             form.reset()
